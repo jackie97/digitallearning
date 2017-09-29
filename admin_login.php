@@ -3,8 +3,8 @@
 <head lang="en">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <title>Admin Login</title>
 </head>
 <style>
