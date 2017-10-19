@@ -32,7 +32,7 @@ if(isset($_POST['signupSubmit'])){
                     'gender' => $_POST['gender'],
                     //'age' => $_POST['age'],
                     'residence' => $_POST['residence'],
-                    'password' => md5($_POST['password']),
+                    'password' => $_POST['password'],
                     'phone' => $_POST['phone']
                 );
                 $insert = $user->insert($userData);
@@ -61,7 +61,7 @@ if(isset($_POST['signupSubmit'])){
     	 //get user data from user class
         $conditions['where'] = array(
             'email' => $_POST['email'],
-            'password' => md5($_POST['password']),
+            'password' =>$_POST['password'],
             'status' => '1'
         );
         $conditions['return_type'] = 'single';
