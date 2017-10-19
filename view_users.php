@@ -28,6 +28,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#"><h4>Digital learning: <b>Registered Student's Details</b></h4> </a>
+            <p><a href="new_users.php"><h5><b>Add a new student User</b></h5></a></p>
         </div>
 
          <div id="navbar" class="navbar-collapse collapse">
@@ -63,9 +64,10 @@
             <th>Residence</th>
             <th>Username</th>
             <th>Sign Up Date</th>
-            <th>E-mail</th>
+            <th>E-mail Addresses</th>
             <th>User Password</th>
             <th>Delete User</th>
+            <th> Edit user</th>
         </tr>
         </thead>
 
@@ -86,7 +88,7 @@
             $username=$row[7];
             $created=$row[11];
             $email=$row[8];
-            $password=$row[10];
+            $password=$row[9];
 
 
 
@@ -106,6 +108,8 @@
             <td><?php echo $email;  ?></td>
             <td><?php echo $password;  ?></td>
             <td><a href="delete.php?del=<?php echo $id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->
+             echo '<td><a href="user_edit.php?id=<?php echo $id ?>"><button class="btn btn-default">Edit</button></a></td>';
+        
         </tr>
 
         <?php } ?>
